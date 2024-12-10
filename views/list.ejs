@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Submissions</title>
+  <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+    <!--This page displays all the submissions in a table.-->
+  <h1 style="text-align: center;">Player Submissions</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Field</th>
+        <th>Position</th>
+        <th>Jersy</th>
+        <th>Jersey Number</th>
+        <th>Group</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!--It queries the submissions in the database and displays them on a table.-->
+      <% if (details && details.length > 0) { %>
+        <% details.forEach(player => { %>
+          <tr>
+            <td><%= player.firstName %></td>
+            <td><%= player.lastName %></td>
+            <td><img src="images/campjpg.jpg" alt="Position Image"></td>
+            <td><%= player.position %></td>
+            <td><img src="images/jersyjpg.jpg" alt="Jersey Image"></td>
+            <td><%= player.jersy %></td>
+            <td><%= player.team %></td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <!--displays no submission if the database lacks any entries.-->
+        <tr>
+          <td colspan="6">No Submissions yet!.</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <!--takes the user back to the home page.-->
+  <button><a href="/">Go Back</a></button>
+  <footer>
+    <p class="copy">&copy; 2024 Soccer Tournament. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Match</title>
+  <link href="Images/icon.png" rel="icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="/script/script.js" defer></script>
+</head>
+<body>
+    <!--This is the home page where the users can navigate to different pages and most importantly
+    apply for the tournament by filling up the form.-->
+  <nav>
+    <ul>
+      <li><a href="aboutMe">About Me</a></li>
+      <li><a href="list">Submissions</a></li>
+    </ul>
+  </nav>
+  
+  <h1>Soccer Pick</h1>
+  <!--This form contains all the required information to apply for the tournament.-->
+  <form id="form" action="/submit" method="POST" novalidate>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+    <span id="err-fname" class="err">Field Is Required!</span>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+    <span id="err-lname" class="err">Field Is Required!</span>
+
+    <label for="position">Position:</label>
+    <input type="text" id="position" name="position" placeholder="Enter your position (e.g., forward, goalkeeper)">
+    <span id="err-position" class="err">Field Is Required!</span>
+
+    <label for="number">Jersey Number:</label>
+    <input type="number" id="number" name="number" placeholder="Enter your jersey number">
+    <span id="err-number" class="err">Field and a valid number is Required!</span>
+
+    <label for="group">Group:</label>
+    <input type="group" id="group" name="group" placeholder="Enter your jersey number">
+    <span id="err-group" class="err">Field is Required (chose from group: A, B, C, D)!</span>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your jersey number">
+    <span id="err-email" class="err">Email Is Required and should containt @ and dot symbol!</span>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+  <footer>
+    <p class="copy">&copy; 2024 Soccer Tournament. All rights reserved.</p>
+  </footer>
+</body>
+</html>

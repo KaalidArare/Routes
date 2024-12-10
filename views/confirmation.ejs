@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/confirmation.css">
+    <title>Confirmation Page</title>
+</head>
+<body>
+    <!--This confirmation page displays the information submitted by the user.-->
+    <h1>Thanks for Applying to the tournament!</h1>
+    
+    <!-- EJS -->
+    <div class="container">
+        <h1>Document Submitted!</h1>
+        <ul>
+            <!--Retrieves element entered on the form and displays them-->
+          <li><strong>First Name:</strong> <%= details.firstName %></li>
+          <li><strong>Last Name:</strong> <%= details.lastName %></li>
+          <li><strong>Position:</strong> <%= details.position %></li>
+          <li><strong>Jersey Number:</strong> <%= details.jersy %></li>
+          <li><strong>Email:</strong> <%= details.email %></li>
+          <li><strong>Message:</strong> <%= details.message %></li>
+        </ul>
+        <div class="button-container">
+            <!--Lists all the submissions on the database-->
+          <button><a href="list">All Submissions</a></button>
+        </div>
+      </div>
+      <!--Displays a copyright message-->
+      <footer>
+        <p class="copy">&copy; 2024 Soccer Tournament. All rights reserved.</p>
+      </footer>
+    
+</body>
+</html>

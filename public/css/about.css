@@ -1,0 +1,36 @@
+body {
+    background-color: green;
+    margin-top: 100px;
+
+}
+h1 {
+    content: center;
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+}
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+img {
+    margin-left: 2rem;
+}
+
+p, h2 {
+    margin: auto 10rem;
+    margin-top: 6rem;
+}
+
+#camp {
+    margin: auto 10rem;
+    margin-top: 3rem;
+    width: 20rem;
+}
+
+.copy {
+    font-size: 1rem;  /* Adjust font size as needed */
+    padding: 2px;
+}
+
